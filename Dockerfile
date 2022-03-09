@@ -4,6 +4,10 @@ FROM node:16.13.2-alpine
 WORKDIR /app
 # ! i don't know what this does, i copied it from the internet
 ENV PATH /app/node_modules/.bin:$PATH
+# Setup port 
+ENV PORT=8080
+# expose port
+EXPOSE 8080
 # it copies package.json into app folder
 COPY package.json ./
 # and also package-lock.json
